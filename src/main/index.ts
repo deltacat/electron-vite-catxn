@@ -1,20 +1,28 @@
-import { app, shell, BrowserWindow, ipcMain } from 'electron'
+import { app, shell, BrowserWindow } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import controllers from './controllers'
 
+const sysInfo = controllers.getSysInfo()
+console.info(
+  `Application started on: ${sysInfo.osType}, ${sysInfo.osRelease}, ${sysInfo.osVersion}`
+)
 function createWindow(): void {
+  const isProd = app.isPackaged
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
-    height: 670,
+    width: 1280,
+    height: 800,
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.mjs'),
-      sandbox: false
+      sandbox: false,
+      contextIsolation: true,
+      webSecurity: true,
+      devTools: !isProd
     }
   })
 
@@ -49,9 +57,6 @@ app.whenReady().then(() => {
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
   })
-
-  // IPC test
-  ipcMain.on('ping', () => console.log('pong'))
 
   createWindow()
 

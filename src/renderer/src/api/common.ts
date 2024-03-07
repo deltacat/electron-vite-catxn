@@ -1,4 +1,4 @@
-import { ElectronBackendBase, COMMON_API_PREFIX } from './base'
+import { ElectronBackendBase, COMMON_API_PREFIX, COMMON_SYS_API_PREFIX } from './base'
 
 class CommonApi extends ElectronBackendBase {
   constructor() {
@@ -14,8 +14,18 @@ class CommonApi extends ElectronBackendBase {
   }
 
   exitApp() {
-    return this.exitApp()
+    return this.invoke('exitApp')
+  }
+}
+
+class SystemApi extends ElectronBackendBase {
+  constructor() {
+    super(COMMON_SYS_API_PREFIX)
+  }
+  exitApp() {
+    return this.invoke('exitApp')
   }
 }
 
 export const commonApi = new CommonApi()
+export const sysApi = new SystemApi()

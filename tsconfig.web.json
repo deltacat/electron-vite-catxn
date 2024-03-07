@@ -22,6 +22,10 @@
       "@renderer/*": [
         "src/renderer/src/*"
       ]
-    }
+    },
+    "types": [
+      "pinia-plugin-persistedstate",
+      "unplugin-icons/types/vue"
+    ]
   }
 }

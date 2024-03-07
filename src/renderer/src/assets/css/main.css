@@ -1,37 +1,10 @@
 @import './base.css';
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   background-image: url('./wavy-lines.svg');
   background-size: cover;
   user-select: none;
-}
-
-code {
-  font-weight: 600;
-  padding: 3px 5px;
-  border-radius: 2px;
-  background-color: var(--color-background-mute);
-  font-family:
-    ui-monospace,
-    SFMono-Regular,
-    SF Mono,
-    Menlo,
-    Consolas,
-    Liberation Mono,
-    monospace;
-  font-size: 85%;
-}
-
-#app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 80px;
 }
 
 .logo {
@@ -88,80 +61,37 @@ code {
   font-weight: 700;
 }
 
-.actions {
-  display: flex;
-  padding-top: 32px;
-  margin: -6px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.action {
-  flex-shrink: 0;
-  padding: 6px;
-}
-
-.action a {
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  border: 1px solid transparent;
-  text-align: center;
-  font-weight: 600;
-  white-space: nowrap;
-  border-radius: 20px;
-  padding: 0 20px;
-  line-height: 38px;
-  font-size: 14px;
-  border-color: var(--ev-button-alt-border);
-  color: var(--ev-button-alt-text);
-  background-color: var(--ev-button-alt-bg);
-}
-
-.action a:hover {
-  border-color: var(--ev-button-alt-hover-border);
-  color: var(--ev-button-alt-hover-text);
-  background-color: var(--ev-button-alt-hover-bg);
-}
-
 .copyright {
   font-family: 'Calisto MT', '思源宋体', 'Menlo', 'Lucida Console', monospace;
   color: #c2f5ff;
   padding-inline-start: 0;
-  margin-bottom: 6px;
-  position: absolute;
-  bottom: 80px;
+  padding: 0;
+  margin: 0;
+}
 
-  li {
-    display: block;
-    padding: 0 12px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-  }
+.copyright li {
+  display: block;
+  padding: 0 12px;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 .versions {
-  position: absolute;
-  bottom: 30px;
-  margin: 0 auto;
-  padding: 15px 0;
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0;
   font-family: 'Menlo', 'Lucida Console', monospace;
-  display: inline-flex;
   overflow: hidden;
-  align-items: center;
-  /* border-radius: 22px;
-  background-color: #202127;
-  backdrop-filter: blur(24px); */
 }
 
 .versions li {
   display: block;
   float: left;
   border-right: 1px solid var(--ev-c-gray-1);
-  padding: 0 20px;
-  font-size: 0.9rem;
-  line-height: 0.9rem;
-  opacity: 0.8;
+  padding: 0px 12px;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  opacity: 0.6;
   &:last-child {
     border: none;
   }

@@ -2,3 +2,8 @@ singleQuote: true
 semi: false
 printWidth: 100
 trailingComma: none
+# 解决Prettier HTML闭合标签总是另起一行的问题
+# https://github.com/prettier/prettier/issues/5377#issuecomment-678644985
+bracketSameLine: true
+htmlWhitespaceSensitivity: ignore
+endOfLine: 'lf'

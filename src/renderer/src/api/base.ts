@@ -5,6 +5,7 @@ function appendCmdName(...secs: string[]) {
 }
 
 export const COMMON_API_PREFIX = 'common'
+export const COMMON_SYS_API_PREFIX = appendCmdName(COMMON_API_PREFIX, 'sys')
 
 export class ElectronBackendBase {
   protected apiPrefix: string

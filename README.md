@@ -2,9 +2,8 @@
 
 An Electron application scaffolding, based on [electron-vite](https://electron-vite.org/) project, added something useful.
 
-- electron
-- vite
-- vue + typescript
+- electron + vite
+- vue + typescript + pina + vue-router
 - element-plus
 - iconify
 
