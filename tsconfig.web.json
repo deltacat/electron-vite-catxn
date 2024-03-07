@@ -7,6 +7,15 @@
     "src/preload/*.d.ts"
   ],
   "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "composite": true,
     "baseUrl": ".",
     "paths": {

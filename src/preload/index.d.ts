@@ -1,8 +1,9 @@
-import { ElectronAPI } from '@electron-toolkit/preload'
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 declare global {
   interface Window {
-    electron: ElectronAPI
+    electron: any
     api: unknown
   }
 }
+
+export {}

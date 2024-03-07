@@ -124,6 +124,22 @@ code {
   background-color: var(--ev-button-alt-hover-bg);
 }
 
+.copyright {
+  font-family: 'Calisto MT', '思源宋体', 'Menlo', 'Lucida Console', monospace;
+  color: #c2f5ff;
+  padding-inline-start: 0;
+  margin-bottom: 6px;
+  position: absolute;
+  bottom: 80px;
+
+  li {
+    display: block;
+    padding: 0 12px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}
+
 .versions {
   position: absolute;
   bottom: 30px;
@@ -133,9 +149,9 @@ code {
   display: inline-flex;
   overflow: hidden;
   align-items: center;
-  border-radius: 22px;
+  /* border-radius: 22px;
   background-color: #202127;
-  backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px); */
 }
 
 .versions li {
@@ -143,8 +159,8 @@ code {
   float: left;
   border-right: 1px solid var(--ev-c-gray-1);
   padding: 0 20px;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
   opacity: 0.8;
   &:last-child {
     border: none;
