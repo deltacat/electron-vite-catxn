@@ -22,7 +22,7 @@
     "build:win": "yarn build && electron-builder --win",
     "build:mac": "yarn build && electron-builder --mac",
     "build:linux": "yarn build && electron-builder --linux",
-    "clean": "rm -rf dist out && rm components.d.ts",
+    "clean": "rm -rf dist out && rm src/renderer/components.d.ts src/renderer/auto-imports.d.ts",
     "clean:all": "yarn clean && rm -rf node_modules"
   },
   "packageManager": "yarn@1.22.21",
@@ -52,6 +52,7 @@
     "pinia-plugin-persistedstate": "^3.2.1",
     "prettier": "^3.2.5",
     "typescript": "^5.4.2",
+    "unplugin-auto-import": "^0.17.5",
     "unplugin-icons": "^0.18.5",
     "unplugin-vue-components": "^0.26.0",
     "vite": "^5.1.5",

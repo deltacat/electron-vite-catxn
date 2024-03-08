@@ -4,7 +4,7 @@
   <el-container>
     <el-header></el-header>
     <el-main class="home-content">
-      <img alt="logo" class="logo" src="../assets/electron.svg" />
+      <img alt="logo" class="logo" src="../assets/svg/electron.svg" />
       <div class="creator">
         Powered by
         <a href="https://electron-vite.org" target="_blank">electron-vite</a>

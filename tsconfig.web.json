@@ -24,6 +24,7 @@
       ]
     },
     "types": [
+      "element-plus/global",
       "pinia-plugin-persistedstate",
       "unplugin-icons/types/vue"
     ]

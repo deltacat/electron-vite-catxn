@@ -3,4 +3,5 @@ dist
 out
 .DS_Store
 *.log*
-components.d.ts
+src/**/components.d.ts
+src/**/auto-imports.d.ts

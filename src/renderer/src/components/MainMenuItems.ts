@@ -1,5 +1,5 @@
-import { Setting } from '@element-plus/icons-vue'
 import type { Component } from 'vue'
+import MdiCogOutline from '~icons/mdi/cog-outline'
 import MdiFunction from '~icons/mdi/function'
 import MdiMovieOpenOutline from '~icons/mdi/movie-open-outline'
 import MdiPresentation from '~icons/mdi/presentation'
@@ -29,7 +29,7 @@ const manageMenuItems: MenuItemOpt[] = [
   {
     title: '通用设置',
     path: '/settings/common',
-    icon: Setting
+    icon: MdiCogOutline
   }
 ]
 

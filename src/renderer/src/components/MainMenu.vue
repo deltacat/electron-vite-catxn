@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { sysApi } from '@renderer/api'
-import { House, SwitchButton } from '@element-plus/icons-vue'
 import { ref } from 'vue'
+import MdiHome from '~icons/mdi/home'
+import MdiPower from '~icons/mdi/power'
 import { MenuItemOpt, MenuItems } from './MainMenuItems'
 
 function showMenuItem(item: MenuItemOpt) {
@@ -29,7 +30,7 @@ const openeds = ref(['/estor'])
     style="height: 100%">
     <el-menu-item index="/">
       <el-icon>
-        <house />
+        <MdiHome />
       </el-icon>
       <span>主页</span>
     </el-menu-item>
@@ -46,7 +47,7 @@ const openeds = ref(['/estor'])
       </el-menu-item>
     </el-sub-menu>
     <el-menu-item @click="exitApp()">
-      <el-icon><SwitchButton /></el-icon>
+      <el-icon><MdiPower /></el-icon>
       <span>退出</span>
     </el-menu-item>
   </el-menu>
